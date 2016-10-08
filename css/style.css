@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Raleway|Lato);
+
+a:link, a:active {color: #202020; text-decoration: underline; }
+a:visited {color: #101010; text-decoration: underline; }
+a:hover {color: #101010; text-decoration: none; background-color: #e0e0e4; }
+
+header, section, footer, aside, nav, article, figure, figcaption {
+    display: block;
+}
+
+body {
+    width: 900px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    background-color: #f0f0f4;
+    color: #202020;
+}
+
+blockquote {
+    border-left: 2px solid #d0d0d4;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    text-align: left;
+    padding: 5px 30px 5px 0px;
+}
+
+th {
+    white-space: nowrap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+
+p {
+    padding: 0px;
+}
+
+header {
+    padding: 80px 150px 20px;
+    font-size: 20px;
+}
+
+header h1, header h2, header h3, header h4, header h5, header h6 {
+    text-transform: uppercase;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+}
+
+header h1 a:link, a:active, a:visited {
+    text-decoration: none;
+    color: #202020;}
+header h1 a:hover {
+    background-color: #d0d0d4;
+}
+
+aside {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    line-height: 1.75;
+    text-align: right;
+    padding: 30px;
+    float: left;
+    width: 20%;
+    text-transform: uppercase;
+    margin-top: 1.3em;
+}
+
+aside a:link, a:active, a:visited {
+    text-decoration: none;
+    color: #202020;}
+aside a:hover {
+    background-color: #d0d0d4;
+}
+
+aside ul {
+    margin-top: 0em;
+}
+
+article {
+    float: right;
+    padding: 30px;
+    width: 65%;
+}
+
+footer {
+    float: right;
+    padding: 30px;
+    width: 65%;
+    clear: both;
+    text-align: left;
+    margin-top: 10em;
+    font-size: 15px;
+    color: #a0a0a4;
+}
+
