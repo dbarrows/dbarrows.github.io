@@ -9,7 +9,7 @@ header, section, footer, aside, nav, article, figure, figcaption {
 }
 
 body {
-    width: 900px;
+    width: 800px;
     margin: 0 auto;
     line-height: 1.5;
     font-size: 16px;
@@ -46,10 +46,14 @@ h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 h3 {
+    font-size: 18px;
+}
+
+h4 {
     font-size: 16px;
 }
 
@@ -83,7 +87,7 @@ aside {
     float: left;
     width: 20%;
     text-transform: uppercase;
-    margin-top: 1.3em;
+    margin-top: 0.25em;
 }
 
 aside a:link, a:active, a:visited {
@@ -101,6 +105,16 @@ article {
     float: right;
     padding: 30px;
     width: 65%;
+}
+
+article h1 {
+    font-style: bold;
+    font-size: 30px;
+    margin-top: 0em;
+}
+
+article h2 {
+    border-bottom: 1px solid #d0d0d4;
 }
 
 footer {
