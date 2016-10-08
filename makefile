@@ -13,7 +13,13 @@ cv.html: content/cv-content.html css/style.css $(TTOP) $(TBOTTOM)
 content/cv-content.html: cv/cv.md
 	pandoc $< --output $@
 
+contact.html: content/contact-content.html css/style.css $(TTOP) $(TBOTTOM)
+	./stitch.sh $(TTOP) $< $(TBOTTOM) >$@
+
+content/contact-content.html: markdown/contact.md
+	pandoc $< --output $@
+
 .PHONEY: all clean
-all: index.html cv.html
+all: index.html cv.html contact.html
 clean:
-	rm -rf index.html content/about-content.html cv.html content/cv-content.html
+	rm -rf index.html content/about-content.html cv.html content/cv-content.html contact.html, content/contact-content.html
