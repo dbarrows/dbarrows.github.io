@@ -20,6 +20,6 @@ content/contact-content.html: markdown/contact.md
 	pandoc $< --output $@
 
 .PHONEY: all clean
-all: index.html cv.html contact.html
+all: index.html contact.html
 clean:
-	rm -rf index.html content/about-content.html cv.html content/cv-content.html contact.html content/contact-content.html
+	rm -rf index.html content/about-content.html contact.html content/contact-content.html
