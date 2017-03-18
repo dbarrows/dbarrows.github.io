@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Oswald|Raleway|Lato);
+@import url(https://fonts.googleapis.com/css?family=Oswald|Raleway|Lato|Open+Sans:300);
 
 a:link, a:active {color: #202020; text-decoration: underline; }
 a:visited {color: #101010; text-decoration: underline; }
@@ -38,7 +38,7 @@ th {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', 'Open Sans Light', Helvetica, Arial, sans-serif;
 }
 
 h2, h3, h4, h5, h6 {
