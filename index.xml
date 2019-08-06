@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dexter Barrows</title>
-    <link>http://dexter.barrows.io/</link>
+    <link>https://dexter.barrows.io/</link>
     <description>Recent content on Dexter Barrows</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Oct 2018 10:08:14 -0400</lastBuildDate>
     
-	<atom:link href="http://dexter.barrows.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dexter.barrows.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CV</title>
-      <link>http://dexter.barrows.io/cv/</link>
+      <link>https://dexter.barrows.io/cv/</link>
       <pubDate>Sat, 27 Oct 2018 10:08:14 -0400</pubDate>
       
-      <guid>http://dexter.barrows.io/cv/</guid>
+      <guid>https://dexter.barrows.io/cv/</guid>
       <description>Education PhD - Applied Mathematics Ryerson University, in progress
  Research area: stochastic biochemical networks  MSc - Applied Mathematics McMaster University, 2016
  Thesis: A Comparative Study of Techniques for Estimation and Inference of Nonlinear Stochastic Time Series, under Ben Bolker  BSc - Mathematics / Computer Science Ryerson University, 2014
@@ -25,10 +25,10 @@
     
     <item>
       <title>About</title>
-      <link>http://dexter.barrows.io/about/</link>
+      <link>https://dexter.barrows.io/about/</link>
       <pubDate>Sun, 21 Oct 2018 20:16:46 -0400</pubDate>
       
-      <guid>http://dexter.barrows.io/about/</guid>
+      <guid>https://dexter.barrows.io/about/</guid>
       <description>I&amp;rsquo;m a PhD student just starting at Ryerson University, working on the modelling of stochastic biochemical networks.
  @dbarrows
  LinkedIn
