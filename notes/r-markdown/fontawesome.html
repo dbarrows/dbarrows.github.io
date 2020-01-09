@@ -11,8 +11,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+<meta name="date" content="2020-01-01" />
 
-<title>About</title>
+<title>Fontawesome</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -1947,23 +1948,48 @@ if (window.hljs) {
 
 
 
-<h1 class="title toc-ignore">About</h1>
+<h1 class="title toc-ignore">Fontawesome</h1>
+<h4 class="date">2020</h4>
 
 
 
-<p><br /></p>
-<p>I’m a PhD student just starting at Ryerson University, working on the modelling of stochastic biochemical networks.</p>
-<p><i class="fab fa-github"></i> <a href="https://github.com/dbarrows">@dbarrows</a><br />
-<i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dexter-barrows/">LinkedIn</a><br />
-<i class="fas fa-university"></i> <a href="https://scholar.google.ca/citations?hl=en&amp;user=F43qj7oAAAAJ">Google Scholar</a><br />
-<i class="fas fa-camera"></i> <a href="https://www.instagram.com/dexter.thephotographer/">@dexter.thephotographer</a><br />
-<i class="fas fa-envelope"></i> <a href="mailto:dexter@barrows.io">dexter@barrows.io</a></p>
-<p>I recently worked at 7D surgical developing software for surgical devices, and before that at the Biophotonics and Bioengineering Laboratory (BBL) at Ryerson University and Sunnybrook Health Sciences Centre. My work involved GPU-accelerated medical image processing, UI design, realtime Doppler optical coherence tomography (OCT) processing and display, and computational anatomy segmentation.</p>
-<p>I completed a Masters degree in Applied Mathematics with a focus on epidemic forecasting at McMaster University. You can read about it <a href="http://hdl.handle.net/11375/19103">here</a>, or check out the code <a href="https://github.com/dbarrows/epidemic-forecasting">here</a>.</p>
-<p>I previously wrote <a href="https://github.com/dbarrows/biochemical-kinetics">MARS</a> as part of my undergraduate (BSc Mathematics / Computer Science) thesis, which is MATLAB software for modelling the evolution of systems of chemical reactions.</p>
+<p>Fontawesome<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> A collection of vector icons and logos, <a href="https://fontawesome.com" class="uri">https://fontawesome.com</a>.</span> icon support is actually included in R Markdown out of the box (!), but has to be enabled manually.</p>
+<p>Include the chunk:</p>
+<pre class="markdown"><code>```{r setup, include=FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```</code></pre>
+<p>to register the required dependencies, then you can include Fontawesome icons<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> You can find icon HTML codes in the <a href="https://fontawesome.com/icons?d=gallery">gallery</a>.</span> via HTML snippets:</p>
+<pre class="html"><code>&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt;</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Code</th>
+<th align="left">Icon</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>&lt;i class=&quot;fab fa-r-project&quot;&gt;&lt;/i&gt;</code></td>
+<td align="left"><i class="fab fa-r-project"></i></td>
+</tr>
+<tr class="even">
+<td align="left"><code>&lt;i class=&quot;fab fa-github&quot;&gt;&lt;/i&gt;</code></td>
+<td align="left"><i class="fab fa-github"></i></td>
+</tr>
+<tr class="odd">
+<td align="left"><code>&lt;i class=&quot;fas fa-camera&quot;&gt;&lt;/i&gt;</code></td>
+<td align="left"><i class="fas fa-camera"></i></td>
+</tr>
+<tr class="even">
+<td align="left"><code>&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt;</code></td>
+<td align="left"><i class="fas fa-envelope"></i></td>
+</tr>
+</tbody>
+</table>
 
 <br><br><br>
 <p style="text-align: center;">
+    <button onclick="window.location.href = &#39;/notes&#39;;">← Notes</button>
     <button onclick="window.location.href = &#39;/&#39;;">Home</button>
 </p>
 

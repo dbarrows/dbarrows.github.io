@@ -236,6 +236,7 @@ h1.title, h1 { text-transform: uppercase; }
 h1.title {
 font-weight: 800; font-size: 14pt;
 width: 60%;
+margin-bottom: 0em;
 }
 h1, h2 { font-size: 12pt; }
 h3.subtitle {
@@ -262,37 +263,59 @@ padding-top: 10rem;
 padding-bottom: 10rem;
 }
 div.figure { max-width: 67.5%; }
-p, footer, table, hr { width: 67.5%; }
-pre { width: 62.5%; overflow-x: auto; }
-ol, ul { width: 62.5%; }
+img { width: 120%%; }
+p, footer, hr, pre, table, ol, ul { width: 67.5%; }
+pre { overflow-x: auto; }
 p, ol, ul {
 font-size: 12pt;
 line-height: 1.6rem;
 }
-blockquote, table, .sidenote, .marginnote { font-size: 11pt; }
+table, .sidenote, .marginnote { font-size: 11pt; }
 blockquote {
 font-family: 'Lato', Helvetica, Arial, sans-serif;
 font-weight: 300;
 font-style: italic;
-color: #303030;
+color: #404040;
 margin-top: 3rem;
 margin-bottom: 3rem;
 }
-code, blockquote footer { font-size: 10pt; }
-.sidenote-number, pre code { font-size: 9pt; }
-code, pre, pre code { background: #f8f8f8; }
-pre {
-padding: 10px;
+blockquote footer { font-size: 10pt; }
+.sidenote-number { font-size: 8pt; }
+pre { padding: 10px; }
+table {
+border-top: revert;
+border-bottom: revert;
 }
+th { border-bottom: 1px solid #404040; }
+code, pre code { font-size: 10pt; }
+.marginnote code, .sidenote code { font-size: 9pt; }
+code, pre { background: #f8f8f8; }
 a:link {
 all:revert;
 text-decoration: underline;
 text-decoration-thickness: 0.05em;
+text-underline-offset: 0.2em;
 text-decoration-color: #404040;
+}
+button {
+background-color: transparent;
+border: 1px solid black;
+color: black;
+padding: 3px 5px 4px 5px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 10pt;
+text-transform: uppercase;
+}
+button:hover {
+background-color: black;
+color: white;
 }
 .sidenote, .marginnote {
 margin-right: -40%;
 width: 30%;
+color: #404040;
 }
 @media screen and (max-width: 800px) {
 p, footer, ol, ul, table, hr { width: 90%; }
@@ -374,6 +397,9 @@ if (window.hljs) {
 </div>
 <div id="cv" class="section level1">
 <h1><a href="cv.html">CV</a></h1>
+</div>
+<div id="notes" class="section level1">
+<h1><a href="notes.html">Notes</a></h1>
 </div>
 <div id="photography" class="section level1">
 <h1><a href="https://www.instagram.com/dexter.thephotographer">Photography</a></h1>

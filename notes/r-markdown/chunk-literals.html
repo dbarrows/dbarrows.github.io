@@ -11,8 +11,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+<meta name="date" content="2020-01-01" />
 
-<title>CV</title>
+<title>Chunk literals</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -388,51 +389,26 @@ if (window.hljs) {
 
 
 
-<h1 class="title toc-ignore">CV</h1>
+<h1 class="title toc-ignore">Chunk literals</h1>
+<h4 class="date">2020</h4>
 
 
 
-<p><br /></p>
-<div id="education" class="section level1">
-<h1>Education</h1>
-<ul>
-<li><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote">Current</span> <strong>PhD - Mathematical Modelling</strong><br />
-<em>Ryerson University</em><br />
-Research area: stochastic biochemical networks</li>
-<li><label for="tufte-mn-2" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-2" class="margin-toggle"><span class="marginnote">2016</span> <strong>MSc - Applied Mathematics</strong><br />
-<em>McMaster University</em><br />
-Thesis: <em>A Comparative Study of Techniques for Estimation and Inference of Nonlinear Stochastic Time Series</em>, under <a href="https://ms.mcmaster.ca/~bolker/">Ben Bolker</a></li>
-<li><label for="tufte-mn-3" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-3" class="margin-toggle"><span class="marginnote">2014</span> <strong>BSc - Mathematics / Computer Science</strong><br />
-<em>Ryerson University</em><br />
-Thesis: <em>Software for Multi-level Monte-Carlo Simulation of Stochastic Biochemical Kinetics</em>, under <a href="https://math.ryerson.ca/~silvana/">Silvana Ilie</a></li>
-</ul>
-</div>
-<div id="experience" class="section level1">
-<h1>Experience</h1>
-<ul>
-<li><label for="tufte-mn-4" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-4" class="margin-toggle"><span class="marginnote">2017–2019</span> <strong>Software Developer</strong><br />
-<em>7D Surgical</em><br />
-Developed software components for medical embedded systems, with a focus on algorithms for GPU-accelerated 3D image processing and UI design.</li>
-<li><label for="tufte-mn-5" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-5" class="margin-toggle"><span class="marginnote">2015–2017</span> <strong>Research Assistant</strong><br />
-<em>Biophotonics and Bioengineering Laboratory</em><br />
-Designed algorithms for GPU-accelerated medical image processing and semi-automated anatomical segmentation</li>
-</ul>
-</div>
-<div id="publications" class="section level1">
-<h1>Publications</h1>
-<ul>
-<li><label for="tufte-mn-6" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-6" class="margin-toggle"><span class="marginnote">2019</span> <em><a href="https://doi.org/10.1364/BOE.10.003114">Optical coherence tomography for dynamic axial correction of an optical end-effector for robot-guided surgical laser ablation</a></em><br />
-J Jivraj, C Chen, <strong>D Barrows</strong>, VXD Yang</li>
-<li><label for="tufte-mn-7" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-7" class="margin-toggle"><span class="marginnote">2017</span> <em><a href="https://dx.doi.org/10.1117/12.2254930">Graphics processor unit acceleration enables realtime endovascular Doppler optical coherence tomography imaging</a></em><br />
-<strong>D Barrows</strong>, B Vuong, K Lee, J Jivraj, VXD Yang</li>
-<li><label for="tufte-mn-8" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-8" class="margin-toggle"><span class="marginnote">2017</span> <em><a href="https://doi.org/10.1117/12.2256532">Assessment of hemodynamics of intracranial aneurysms using Doppler optical coherence tomography in patient specific phantoms: preliminary results</a></em><br />
-JM Ramjist, J Jivraj, <strong>D Barrows</strong>, B Vuong, R Wong, VXD Yang</li>
-</ul>
-<p><br /> Download full CV <a href="/dexter-barrows-cv.pdf">here</a>.</p>
-</div>
+<p>If you try to include an R Markdown chunk inside a fenced code block, as in the <a href="fontawesome.html">fontawesome</a> note, you may find that R Markdown will instead <em>run</em> the chunk instead of displaying it (yikes).</p>
+<p>A solution courtesy of Rstudio Support<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> <a href="https://support.rstudio.com/hc/en-us/articles/360018181633-Including-verbatim-R-code-chunks-inside-R-Markdown">Stephens, 2019.</a></span> shows that you can prefix the problematic code chunk with an empty inline R statement, and then wrap that in a <em>four</em>-tick markdown block, as follows:</p>
+<pre class="markdown"><code>````markdown
+```{r setup, include=FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+````</code></pre>
+<p>which, when rendered, will display as:</p>
+<pre class="markdown"><code>```{r setup, include=FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```</code></pre>
 
 <br><br><br>
 <p style="text-align: center;">
+    <button onclick="window.location.href = &#39;/notes&#39;;">← Notes</button>
     <button onclick="window.location.href = &#39;/&#39;;">Home</button>
 </p>
 
