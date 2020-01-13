@@ -11,9 +11,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<meta name="date" content="2020-01-01" />
 
-<title>Strings</title>
+<title>Code</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -401,134 +400,20 @@ if (window.hljs) {
 
 
 
-<h1 class="title toc-ignore">Strings</h1>
-<h4 class="date">2020</h4>
+<h1 class="title toc-ignore">Code</h1>
 
 
 
-<div id="libraries" class="section level1">
-<h1>Libraries</h1>
-<pre class="r"><code>library(stringr)</code></pre>
-</div>
-<div id="length" class="section level1">
-<h1>Length</h1>
-<p><code>str_length</code><label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> <a href="https://stringr.tidyverse.org/reference/str_length.html">The length of a string</a></span> function:</p>
-<pre class="r"><code>str_length(&quot;Party Parrot&quot;)
-#&gt; [1] 12</code></pre>
-</div>
-<div id="combining" class="section level1">
-<h1>Combining</h1>
-<div id="individual-strings" class="section level2">
-<h2>Individual strings</h2>
-<p><code>str_c</code><label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> <a href="https://stringr.tidyverse.org/reference/str_c.html">Join multiple strings into a single string</a></span> function:</p>
-<pre class="r"><code>str_c(&quot;What&#39;s&quot;, &quot; &quot;, &quot;next&quot;, &quot;?&quot;)
-#&gt; [1] &quot;What&#39;s next?&quot;</code></pre>
-<p><code>sep</code> argument:</p>
-<pre class="r"><code>str_c(&quot;Secret&quot;, &quot;plan&quot;, &quot;to&quot;, &quot;fight&quot;, &quot;inflation&quot;, sep = &quot; &quot;)
-#&gt; [1] &quot;Secret plan to fight inflation&quot;</code></pre>
-</div>
-<div id="vectors" class="section level2">
-<h2>Vectors</h2>
-<pre class="r"><code>str_c(&quot;file&quot;, 1:5)
-#&gt; [1] &quot;file1&quot; &quot;file2&quot; &quot;file3&quot; &quot;file4&quot; &quot;file5&quot;</code></pre>
-<p><code>collapse</code> argument:</p>
-<pre class="r"><code>str_c(&quot;file&quot;, 1:5, collapse = &quot;, &quot;)
-#&gt; [1] &quot;file1, file2, file3, file4, file5&quot;</code></pre>
-</div>
-</div>
-<div id="splitting" class="section level1">
-<h1>Splitting</h1>
-<p><code>str_split</code><label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> <a href="https://stringr.tidyverse.org/reference/str_split.html">Split up a string into pieces</a></span> function:</p>
-<pre class="r"><code>str_split(&quot;Have a cookie Sam&quot;, &quot; &quot;)
-#&gt; [[1]]
-#&gt; [1] &quot;Have&quot;   &quot;a&quot;      &quot;cookie&quot; &quot;Sam&quot;</code></pre>
-<p>Extract the results vector using <code>unlist</code>:</p>
-<pre class="r"><code>unlist(str_split(&quot;Have a cookie Sam&quot;, &quot; &quot;))
-#&gt; [1] &quot;Have&quot;   &quot;a&quot;      &quot;cookie&quot; &quot;Sam&quot;</code></pre>
-</div>
-<div id="subsetting" class="section level1">
-<h1>Subsetting</h1>
-<p><code>str_sub</code><label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> <a href="https://stringr.tidyverse.org/reference/str_sub.html">Extract and replace substrings from a character vector</a></span> function:</p>
-<pre class="r"><code>str_sub(&quot;They&#39;re all about duty&quot;, 1, 4)
-#&gt; [1] &quot;They&quot;</code></pre>
-<p>Negative indicies index from the end:</p>
-<pre class="r"><code>str_sub(&quot;Washington Dulles International Airport: IAD&quot;, -3, -1)
-#&gt; [1] &quot;IAD&quot;</code></pre>
-</div>
-<div id="transforming" class="section level1">
-<h1>Transforming</h1>
-<div id="case-change" class="section level2">
-<h2>Case change</h2>
-<p><code>str_to_upper</code>, <code>str_to_lower</code>, <code>str_to_title</code>, <code>str_to_sentence</code><label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> <a href="https://stringr.tidyverse.org/reference/case.html">Convert case of a string.</a></span> functions:</p>
-<pre class="r"><code>str_to_lower(&quot;LINCOLN MEMORIAL&quot;)
-#&gt; [1] &quot;lincoln memorial&quot;
-str_to_upper(&quot;LINCOLN MEMORIAL&quot;)
-#&gt; [1] &quot;LINCOLN MEMORIAL&quot;
-str_to_title(&quot;LINCOLN MEMORIAL&quot;)
-#&gt; [1] &quot;Lincoln Memorial&quot;
-str_to_sentence(&quot;LINCOLN MEMORIAL&quot;)
-#&gt; [1] &quot;Lincoln memorial&quot;</code></pre>
-</div>
-<div id="trimming" class="section level2">
-<h2>Trimming</h2>
-<p><code>str_trim</code> and <code>str_squish</code><label for="tufte-sn-6" class="margin-toggle sidenote-number">6</label><input type="checkbox" id="tufte-sn-6" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">6</span> <a href="https://stringr.tidyverse.org/reference/str_trim.html">Trim whitespace from a string</a></span> functions:</p>
-<pre class="r"><code>s &lt;- &quot;   Big   Bird&quot;
-writeLines(s)
-#&gt;    Big   Bird
-writeLines(str_trim(s))
-#&gt; Big   Bird
-writeLines(str_squish(s))
-#&gt; Big Bird</code></pre>
-</div>
-</div>
-<div id="regular-expressions" class="section level1">
-<h1>Regular Expressions</h1>
-<div id="detecting-matches" class="section level2">
-<h2>Detecting matches</h2>
-<p><code>str_detect</code><label for="tufte-sn-7" class="margin-toggle sidenote-number">7</label><input type="checkbox" id="tufte-sn-7" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">7</span> <a href="https://stringr.tidyverse.org/reference/str_detect.html">Detect the presence or absence of a pattern in a string</a></span> function:</p>
-<pre class="r"><code>sentences &lt;- c(&quot;You&#39;re a smart savvy woman who could easily consider world domination for a next career move.&quot;,
-               &quot;I&#39;m going to crush him. I&#39;m going to make him cry and then I&#39;m going to tell his momma about it.&quot;,
-               &quot;Never doubt that a small group of thoughtful committed citizens can change the world.&quot;)
-str_detect(sentences, &quot;world&quot;)
-#&gt; [1]  TRUE FALSE  TRUE</code></pre>
-</div>
-<div id="extracting-matches" class="section level2">
-<h2>Extracting matches</h2>
-<p><code>str_extract</code> and <code>str_extract_all</code><label for="tufte-sn-8" class="margin-toggle sidenote-number">8</label><input type="checkbox" id="tufte-sn-8" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">8</span> <a href="https://stringr.tidyverse.org/reference/str_extract.html">Extract matching patterns from a string</a></span> functions:</p>
-<pre class="r"><code>header &lt;- &#39;
----
-title: &quot;Two Cathedrals&quot;
-author: &quot;Aaron Sorkin&quot;
-date: &quot;May 16, 2001&quot;
----
-&#39;
-str_extract(header, &quot;title:.*&quot;)
-#&gt; [1] &quot;title: \&quot;Two Cathedrals\&quot;&quot;</code></pre>
-</div>
-<div id="replacing" class="section level2">
-<h2>Replacing</h2>
-<p><code>str_replace</code> and <code>str_replace_all</code><label for="tufte-sn-9" class="margin-toggle sidenote-number">9</label><input type="checkbox" id="tufte-sn-9" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">9</span> <a href="https://stringr.tidyverse.org/reference/str_replace.html">Replace matched patterns in a string</a></span> functions:</p>
-<pre class="r"><code>str_replace(sentences[2], &quot;I&#39;m going to&quot;, &quot;I will&quot;)
-#&gt; [1] &quot;I will crush him. I&#39;m going to make him cry and then I&#39;m going to tell his momma about it.&quot;
-str_replace_all(sentences[2], &quot;I&#39;m going to&quot;, &quot;I will&quot;)
-#&gt; [1] &quot;I will crush him. I will make him cry and then I will tell his momma about it.&quot;</code></pre>
-<pre class="r"><code>library(magrittr)
-str_extract(header, &quot;title:.*&quot;) %&gt;%
-    str_replace(&quot;title:[ ]*&quot;, &quot;&quot;) %&gt;%
-    str_replace_all(&quot;\&quot;&quot;, &quot;&quot;)
-#&gt; [1] &quot;Two Cathedrals&quot;</code></pre>
-</div>
-<div id="globs" class="section level2">
-<h2>Globs</h2>
-<p>Convert a glob to a regular expression via <code>glob2rx</code><label for="tufte-sn-10" class="margin-toggle sidenote-number">10</label><input type="checkbox" id="tufte-sn-10" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">10</span> <a href="https://stat.ethz.ch/R-manual/R-devel/library/utils/html/glob2rx.html">Change Wildcard or Globbing Pattern into Regular Expression</a></span> function:</p>
-<pre class="r"><code>dir(pattern = glob2rx(&quot;*.Rmd&quot;))
-#&gt; &quot;eda.Rmd&quot; &quot;report.Rmd&quot;</code></pre>
-</div>
+<p><br /></p>
+<div id="r-packages" class="section level1">
+<h1>r-packages</h1>
+<p>·  <a href="code/r-packages/bondr.html">Bondr</a><br />
+<font style="opacity: 0;">·</font>  Provides utilities and classes for working with reaction networks in R<br style="line-height: 25pt" /> ·  <a href="code/r-packages/emplot.html">Emplot</a><br />
+<font style="opacity: 0;">·</font>  A clean theme for <code>ggplot2</code> with matching <code>geom</code> defaults<br style="line-height: 25pt" /></p>
 </div>
 
 <br><br><br>
 <p style="text-align: center;">
-    <button onclick="window.location.href = &#39;/notes.html&#39;;">← Notes</button>
     <button onclick="window.location.href = &#39;/&#39;;">Home</button>
 </p>
 
