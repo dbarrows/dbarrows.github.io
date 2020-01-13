@@ -423,8 +423,9 @@ if (window.hljs) {
 <pre class="r"><code>str_c(&quot;file&quot;, 1:5, collapse = &quot;, &quot;)
 #&gt; [1] &quot;file1, file2, file3, file4, file5&quot;</code></pre>
 </div>
-<div id="splitting" class="section level2">
-<h2>Splitting</h2>
+</div>
+<div id="splitting" class="section level1">
+<h1>Splitting</h1>
 <p><code>str_split</code><label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> <a href="https://stringr.tidyverse.org/reference/str_split.html">Split up a string into pieces</a></span> function:</p>
 <pre class="r"><code>str_split(&quot;Have a cookie Sam&quot;, &quot; &quot;)
 #&gt; [[1]]
@@ -432,7 +433,6 @@ if (window.hljs) {
 <p>Extract the results vector using <code>unlist</code>:</p>
 <pre class="r"><code>unlist(str_split(&quot;Have a cookie Sam&quot;, &quot; &quot;))
 #&gt; [1] &quot;Have&quot;   &quot;a&quot;      &quot;cookie&quot; &quot;Sam&quot;</code></pre>
-</div>
 </div>
 <div id="subsetting" class="section level1">
 <h1>Subsetting</h1>
@@ -480,17 +480,35 @@ writeLines(str_squish(s))
 str_detect(sentences, &quot;world&quot;)
 #&gt; [1]  TRUE FALSE  TRUE</code></pre>
 </div>
+<div id="extracting-matches" class="section level2">
+<h2>Extracting matches</h2>
+<p><code>str_extract</code> and <code>str_extract_all</code><label for="tufte-sn-8" class="margin-toggle sidenote-number">8</label><input type="checkbox" id="tufte-sn-8" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">8</span> <a href="https://stringr.tidyverse.org/reference/str_extract.html">Extract matching patterns from a string</a></span> functions:</p>
+<pre class="r"><code>header &lt;- &#39;
+---
+title: &quot;Two Cathedrals&quot;
+author: &quot;Aaron Sorkin&quot;
+date: &quot;May 16, 2001&quot;
+---
+&#39;
+str_extract(header, &quot;title:.*&quot;)
+#&gt; [1] &quot;title: \&quot;Two Cathedrals\&quot;&quot;</code></pre>
+</div>
 <div id="replacing" class="section level2">
 <h2>Replacing</h2>
-<p><code>str_replace</code> and <code>str_replace_all</code><label for="tufte-sn-8" class="margin-toggle sidenote-number">8</label><input type="checkbox" id="tufte-sn-8" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">8</span> <a href="https://stringr.tidyverse.org/reference/str_replace.html">Replace matched patterns in a string</a></span> functions:</p>
+<p><code>str_replace</code> and <code>str_replace_all</code><label for="tufte-sn-9" class="margin-toggle sidenote-number">9</label><input type="checkbox" id="tufte-sn-9" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">9</span> <a href="https://stringr.tidyverse.org/reference/str_replace.html">Replace matched patterns in a string</a></span> functions:</p>
 <pre class="r"><code>str_replace(sentences[2], &quot;I&#39;m going to&quot;, &quot;I will&quot;)
 #&gt; [1] &quot;I will crush him. I&#39;m going to make him cry and then I&#39;m going to tell his momma about it.&quot;
 str_replace_all(sentences[2], &quot;I&#39;m going to&quot;, &quot;I will&quot;)
 #&gt; [1] &quot;I will crush him. I will make him cry and then I will tell his momma about it.&quot;</code></pre>
+<pre class="r"><code>library(magrittr)
+str_extract(header, &quot;title:.*&quot;) %&gt;%
+    str_replace(&quot;title:[ ]*&quot;, &quot;&quot;) %&gt;%
+    str_replace_all(&quot;\&quot;&quot;, &quot;&quot;)
+#&gt; [1] &quot;Two Cathedrals&quot;</code></pre>
 </div>
 <div id="globs" class="section level2">
 <h2>Globs</h2>
-<p>Convert a glob to a regular expression via <code>glob2rx</code><label for="tufte-sn-9" class="margin-toggle sidenote-number">9</label><input type="checkbox" id="tufte-sn-9" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">9</span> <a href="https://stat.ethz.ch/R-manual/R-devel/library/utils/html/glob2rx.html">Change Wildcard or Globbing Pattern into Regular Expression</a></span> function:</p>
+<p>Convert a glob to a regular expression via <code>glob2rx</code><label for="tufte-sn-10" class="margin-toggle sidenote-number">10</label><input type="checkbox" id="tufte-sn-10" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">10</span> <a href="https://stat.ethz.ch/R-manual/R-devel/library/utils/html/glob2rx.html">Change Wildcard or Globbing Pattern into Regular Expression</a></span> function:</p>
 <pre class="r"><code>dir(pattern = glob2rx(&quot;*.Rmd&quot;))
 #&gt; &quot;eda.Rmd&quot; &quot;report.Rmd&quot;</code></pre>
 </div>
