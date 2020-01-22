@@ -249,7 +249,7 @@ margin-top: 1.25rem;
 margin-bottom: 1rem;
 }
 h3.subtitle {
-font-size: 13pt;
+font-size: 12pt;
 font-weight: 400;
 margin-top: 0.5rem;
 margin-bottom: 0rem;
@@ -355,6 +355,25 @@ label { cursor: pointer; }
 div.figure { max-width: 90%; }
 pre { width: 90%;
 padding: 0; }
+}
+@media print {
+body {
+width: 100%;
+padding-left: 0%;
+padding-top: 0mm;
+margin: 12mm 12mm 12mm 12mm;
+}
+html { font-size: 9pt; }
+h1.title { font-size: 11pt; }
+h1, h2 { font-size: 9pt; }
+h3.subtitle { font-size: 9pt; }
+h4.author, h4.date { font-size: 7pt; }
+p, ol, ul { font-size: 9pt; }
+table, .sidenote, .marginnote { font-size: 8pt; }
+blockquote footer { font-size: 7pt; }
+.sidenote-number { font-size: 5pt; }
+code, pre code { font-size: 7pt; }
+.marginnote code, .sidenote code { font-size: 6pt; }
 }</style>
 <style type="text/css">.hljs-literal {
 color: #990073;
@@ -425,14 +444,14 @@ if (window.hljs) {
 B &lt;- matrix(runif(4), nrow = 2)
 cbind(A, B)
 #&gt;      [,1] [,2]      [,3]      [,4]
-#&gt; [1,]    1    1 0.1340645 0.1994612
-#&gt; [2,]    1    1 0.6965030 0.8456627
+#&gt; [1,]    1    1 0.9635684 0.5784499
+#&gt; [2,]    1    1 0.7787096 0.7738273
 rbind(A, B)
 #&gt;           [,1]      [,2]
 #&gt; [1,] 1.0000000 1.0000000
 #&gt; [2,] 1.0000000 1.0000000
-#&gt; [3,] 0.1340645 0.1994612
-#&gt; [4,] 0.6965030 0.8456627</code></pre>
+#&gt; [3,] 0.9635684 0.5784499
+#&gt; [4,] 0.7787096 0.7738273</code></pre>
 </div>
 <div id="operators" class="section level1">
 <h1>Operators</h1>

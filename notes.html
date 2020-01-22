@@ -248,7 +248,7 @@ margin-top: 1.25rem;
 margin-bottom: 1rem;
 }
 h3.subtitle {
-font-size: 13pt;
+font-size: 12pt;
 font-weight: 400;
 margin-top: 0.5rem;
 margin-bottom: 0rem;
@@ -354,6 +354,25 @@ label { cursor: pointer; }
 div.figure { max-width: 90%; }
 pre { width: 90%;
 padding: 0; }
+}
+@media print {
+body {
+width: 100%;
+padding-left: 0%;
+padding-top: 0mm;
+margin: 12mm 12mm 12mm 12mm;
+}
+html { font-size: 9pt; }
+h1.title { font-size: 11pt; }
+h1, h2 { font-size: 9pt; }
+h3.subtitle { font-size: 9pt; }
+h4.author, h4.date { font-size: 7pt; }
+p, ol, ul { font-size: 9pt; }
+table, .sidenote, .marginnote { font-size: 8pt; }
+blockquote footer { font-size: 7pt; }
+.sidenote-number { font-size: 5pt; }
+code, pre code { font-size: 7pt; }
+.marginnote code, .sidenote code { font-size: 6pt; }
 }</style>
 <style type="text/css">.hljs-literal {
 color: #990073;
@@ -407,10 +426,18 @@ if (window.hljs) {
 <p><br /></p>
 <div id="r" class="section level1">
 <h1>R</h1>
-<p>·  <a href="notes/R/matrices.html">Matrices</a><br style="line-height: 25pt" /> ·  <a href="notes/R/strings.html">Strings</a><br style="line-height: 25pt" /> ·  <a href="notes/R/vectors.html">Vectors</a><br style="line-height: 25pt" /></p>
+<p>·  <a href="notes/R/factors.html">Factors</a><br style="line-height: 25pt" /> ·  <a href="notes/R/matrices.html">Matrices</a><br style="line-height: 25pt" /> ·  <a href="notes/R/strings.html">Strings</a><br style="line-height: 25pt" /> ·  <a href="notes/R/vectors.html">Vectors</a><br style="line-height: 25pt" /></p>
+</div>
+<div id="jupyter-notebooks" class="section level1">
+<h1>jupyter notebooks</h1>
+<p>·  <a href="notes/jupyter-notebooks/themes.html">Themes</a><br style="line-height: 25pt" /></p>
+</div>
+<div id="python" class="section level1">
+<h1>python</h1>
+<p>·  <a href="notes/python/environments.html">Environments</a><br style="line-height: 25pt" /></p>
 </div>
 <div id="r-markdown" class="section level1">
-<h1>r-markdown</h1>
+<h1>r markdown</h1>
 <p>·  <a href="notes/r-markdown/chunk-literals.html">Chunk literals</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/fontawesome.html">Fontawesome</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/retina-graphics.html">Retina Graphics</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/showtext-graphics.html">Showtext Graphics</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/special-characters.html">Special Characters</a><br style="line-height: 25pt" /></p>
 </div>
 
