@@ -11,8 +11,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+<meta name="date" content="2020-01-01" />
 
-<title>Notes</title>
+<title>Environments</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -419,30 +420,43 @@ if (window.hljs) {
 
 
 
-<h1 class="title toc-ignore">Notes</h1>
+<h1 class="title toc-ignore">Environments</h1>
+<h4 class="date">2020</h4>
 
 
 
-<p><br /></p>
-<div id="r" class="section level1">
-<h1>R</h1>
-<p>·  <a href="notes/R/environments.html">Environments</a><br style="line-height: 25pt" /> ·  <a href="notes/R/factors.html">Factors</a><br style="line-height: 25pt" /> ·  <a href="notes/R/matrices.html">Matrices</a><br style="line-height: 25pt" /> ·  <a href="notes/R/strings.html">Strings</a><br style="line-height: 25pt" /> ·  <a href="notes/R/vectors.html">Vectors</a><br style="line-height: 25pt" /></p>
+<p>Although package management in R is robust thanks to CRAN<label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> <a href="https://cran.r-project.org">The Comprehensive R Archive Network</a></span> and R’s built-in facilities for installing and managing packages<label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> <a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Add_002don-packages">R Installation and Administration: Add-on packages</a></span>, it still may arise that different projects on your systems may require different package versions.</p>
+<p>The <code>renv</code><label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> <a href="https://github.com/rstudio/renv">renv: Project environments for R</a></span> project aims to make isolating and specifying R project package dependencies easy.</p>
+<div id="installation" class="section level1">
+<h1>Installation</h1>
+<pre class="r"><code>install.packages(&quot;renv&quot;)</code></pre>
 </div>
-<div id="jupyter-notebooks" class="section level1">
-<h1>jupyter notebooks</h1>
-<p>·  <a href="notes/jupyter-notebooks/themes.html">Themes</a><br style="line-height: 25pt" /></p>
+<div id="initialization" class="section level1">
+<h1>Initialization</h1>
+<pre class="r"><code>renv::init()</code></pre>
+<p>This creates the lock file and <code>renv/</code> data directory<label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> <a href="https://rstudio.github.io/renv/articles/renv.html#infrastructure">renv: Infrastructure</a></span>.</p>
 </div>
-<div id="python" class="section level1">
-<h1>python</h1>
-<p>·  <a href="notes/python/environments.html">Environments</a><br style="line-height: 25pt" /></p>
+<div id="packages" class="section level1">
+<h1>Packages</h1>
+<p>Installing/removing from CRAN from within the project directory works normally.</p>
+<p>Renv also includes a more comprehensive <code>install</code><label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> <a href="https://rstudio.github.io/renv/reference/install.html">Install Packages</a></span> function.</p>
+<pre class="r"><code>renv::install(&quot;&lt;package&gt;&quot;)</code></pre>
+<p>It can install directly from Github:</p>
+<pre class="r"><code>renv::install(&quot;&lt;user&gt;/&lt;repo&gt;&quot;)</code></pre>
 </div>
-<div id="r-markdown" class="section level1">
-<h1>r markdown</h1>
-<p>·  <a href="notes/r-markdown/chunk-literals.html">Chunk literals</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/fontawesome.html">Fontawesome</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/retina-graphics.html">Retina Graphics</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/showtext-graphics.html">Showtext Graphics</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/special-characters.html">Special Characters</a><br style="line-height: 25pt" /></p>
+<div id="snapshots" class="section level1">
+<h1>Snapshots</h1>
+<p>View repo-lockfile synchronization status<label for="tufte-sn-6" class="margin-toggle sidenote-number">6</label><input type="checkbox" id="tufte-sn-6" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">6</span> <a href="https://rstudio.github.io/renv//reference/status.html">Status</a></span>:</p>
+<pre class="r"><code>renv::status()</code></pre>
+<p>Save the currently-installed package versions to the lock file<label for="tufte-sn-7" class="margin-toggle sidenote-number">7</label><input type="checkbox" id="tufte-sn-7" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">7</span> <a href="https://rstudio.github.io/renv/reference/snapshot.html">Snapshot a Project</a></span>:</p>
+<pre class="r"><code>renv::snapshot()</code></pre>
+<p>Restore snapshots<label for="tufte-sn-8" class="margin-toggle sidenote-number">8</label><input type="checkbox" id="tufte-sn-8" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">8</span> <a href="https://rstudio.github.io/renv/reference/restore.html">Restore a Project</a></span>, which (re)installs the versions of all packages recorded in the lock file:</p>
+<pre class="r"><code>renv::restore()</code></pre>
 </div>
 
 <br><br><br>
 <p style="text-align: center;">
+    <button onclick="window.location.href = &#39;/notes.html&#39;;">← Notes</button>
     <button onclick="window.location.href = &#39;/&#39;;">Home</button>
 </p>
 
