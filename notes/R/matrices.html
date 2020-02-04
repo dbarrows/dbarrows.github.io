@@ -314,14 +314,14 @@ button {
 background-color: transparent;
 border: 1px solid black;
 color: black;
-padding: 0px 7px 1px 7px;
+padding: 0px 7px 0px 7px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 10pt;
 text-transform: uppercase;
 cursor: pointer;
-height: 30px;
+height: 28px;
 }
 button:hover {
 background-color: black;
@@ -334,7 +334,7 @@ color: #404040;
 }
 @media screen and (max-width: 800px) {
 p, footer, ol, ul, table, hr { width: 90%; }
-body { width: 87.5%; padding-left: 12.5%; }
+body { width: 90%; padding-left: 10%; }
 pre { width: 87.5%; }
 ul { width: 85%; }
 figure { max-width: 90%; }
@@ -349,7 +349,7 @@ float: left;
 left: 1rem;
 clear: both;
 width: 95%;
-margin: 1rem 2.5%;
+margin: 2.5% 2.5%;
 vertical-align: baseline;
 position: relative;
 }
@@ -445,15 +445,15 @@ if (window.hljs) {
 <pre class="r"><code>A &lt;- matrix(1, nrow = 2, ncol = 2)
 B &lt;- matrix(runif(4), nrow = 2)
 cbind(A, B)
-#&gt;      [,1] [,2]      [,3]      [,4]
-#&gt; [1,]    1    1 0.1993947 0.7141666
-#&gt; [2,]    1    1 0.2941771 0.1651996
+#&gt;      [,1] [,2]       [,3]       [,4]
+#&gt; [1,]    1    1 0.01851141 0.46972037
+#&gt; [2,]    1    1 0.66236671 0.03080088
 rbind(A, B)
-#&gt;           [,1]      [,2]
-#&gt; [1,] 1.0000000 1.0000000
-#&gt; [2,] 1.0000000 1.0000000
-#&gt; [3,] 0.1993947 0.7141666
-#&gt; [4,] 0.2941771 0.1651996</code></pre>
+#&gt;            [,1]       [,2]
+#&gt; [1,] 1.00000000 1.00000000
+#&gt; [2,] 1.00000000 1.00000000
+#&gt; [3,] 0.01851141 0.46972037
+#&gt; [4,] 0.66236671 0.03080088</code></pre>
 </div>
 <div id="operators" class="section level1">
 <h1>Operators</h1>
