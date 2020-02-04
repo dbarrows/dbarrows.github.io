@@ -235,6 +235,7 @@ letter-spacing: 0.075em;
 h1.title, h1 { text-transform: uppercase; }
 h1.title {
 font-weight: 800; font-size: 14pt;
+line-height: 20pt;
 width: 60%;
 margin-bottom: 0em;
 }
@@ -319,6 +320,7 @@ display: inline-block;
 font-size: 10pt;
 text-transform: uppercase;
 cursor: pointer;
+height: 26px;
 }
 button:hover {
 background-color: black;
@@ -509,14 +511,14 @@ props
 #&gt; {
 #&gt;     2.5 * x[1]
 #&gt; }
-#&gt; &lt;environment: 0x7ff2be0f25d0&gt;
+#&gt; &lt;environment: 0x7fcd1279ae30&gt;
 #&gt; 
 #&gt; [[2]]
 #&gt; function (x) 
 #&gt; {
 #&gt;     0.04 * x[2] * (x[2] - 1)/2 * x[3]
 #&gt; }
-#&gt; &lt;environment: 0x7ff2c03c8f40&gt;</code></pre>
+#&gt; &lt;environment: 0x7fcd1260a3e8&gt;</code></pre>
 <p>Note that dimerisations and multiple reactants are handled properly.</p>
 <p>Propensity functions take a state vector of species quantities, ordered according to the output of the <code>species</code> function.</p>
 <pre class="r"><code>species(network)
