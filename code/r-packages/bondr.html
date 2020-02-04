@@ -440,11 +440,6 @@ if (window.hljs) {
 <!-- badges: start -->
 <!-- badges: end -->
 <p>Provides utilities and classes for working with reaction networks in R.</p>
-<div id="installation" class="section level1">
-<h1>Installation</h1>
-<p>You can install the development version from <a href="https://github.com/">GitHub</a> with:</p>
-<pre class="r"><code>devtools::install_github(&quot;dbarrows/bondr&quot;)</code></pre>
-</div>
 <div id="creating-networks" class="section level1">
 <h1>Creating networks</h1>
 <p>You write systems of reactions using a natural syntax, and bondr will parse it and turn it into an S3 object.</p>
@@ -521,14 +516,14 @@ props
 #&gt; {
 #&gt;     2.5 * x[1]
 #&gt; }
-#&gt; &lt;environment: 0x7fdc4c47b7d8&gt;
+#&gt; &lt;environment: 0x7f9ccd821dc0&gt;
 #&gt; 
 #&gt; [[2]]
 #&gt; function (x) 
 #&gt; {
 #&gt;     0.04 * x[2] * (x[2] - 1)/2 * x[3]
 #&gt; }
-#&gt; &lt;environment: 0x7fdc4e9a61e8&gt;</code></pre>
+#&gt; &lt;environment: 0x7f9cce8f5e00&gt;</code></pre>
 <p>Note that dimerisations and multiple reactants are handled properly.</p>
 <p>Propensity functions take a state vector of species quantities, ordered according to the output of the <code>species</code> function.</p>
 <pre class="r"><code>species(network)
