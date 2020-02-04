@@ -314,13 +314,16 @@ button {
 background-color: transparent;
 border: 1px solid black;
 color: black;
-padding: 3px 5px 4px 5px;
+display: flex;
+align-items: center;
+justify-content: center;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 10pt;
 text-transform: uppercase;
 cursor: pointer;
+height: 28px;
 
 }
 button:hover {
@@ -445,15 +448,15 @@ if (window.hljs) {
 <pre class="r"><code>A &lt;- matrix(1, nrow = 2, ncol = 2)
 B &lt;- matrix(runif(4), nrow = 2)
 cbind(A, B)
-#&gt;      [,1] [,2]        [,3]      [,4]
-#&gt; [1,]    1    1 0.306557054 0.2202323
-#&gt; [2,]    1    1 0.008912389 0.2947531
+#&gt;      [,1] [,2]      [,3]      [,4]
+#&gt; [1,]    1    1 0.7898759 0.4811904
+#&gt; [2,]    1    1 0.8823203 0.6388352
 rbind(A, B)
-#&gt;             [,1]      [,2]
-#&gt; [1,] 1.000000000 1.0000000
-#&gt; [2,] 1.000000000 1.0000000
-#&gt; [3,] 0.306557054 0.2202323
-#&gt; [4,] 0.008912389 0.2947531</code></pre>
+#&gt;           [,1]      [,2]
+#&gt; [1,] 1.0000000 1.0000000
+#&gt; [2,] 1.0000000 1.0000000
+#&gt; [3,] 0.7898759 0.4811904
+#&gt; [4,] 0.8823203 0.6388352</code></pre>
 </div>
 <div id="operators" class="section level1">
 <h1>Operators</h1>

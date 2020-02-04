@@ -313,13 +313,16 @@ button {
 background-color: transparent;
 border: 1px solid black;
 color: black;
-padding: 3px 5px 4px 5px;
+display: flex;
+align-items: center;
+justify-content: center;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 10pt;
 text-transform: uppercase;
 cursor: pointer;
+height: 28px;
 
 }
 button:hover {
@@ -511,14 +514,14 @@ props
 #&gt; {
 #&gt;     2.5 * x[1]
 #&gt; }
-#&gt; &lt;environment: 0x7fa2eb1795d0&gt;
+#&gt; &lt;environment: 0x7fe33adde050&gt;
 #&gt; 
 #&gt; [[2]]
 #&gt; function (x) 
 #&gt; {
 #&gt;     0.04 * x[2] * (x[2] - 1)/2 * x[3]
 #&gt; }
-#&gt; &lt;environment: 0x7fa2eeae59b0&gt;</code></pre>
+#&gt; &lt;environment: 0x7fe33ac4a098&gt;</code></pre>
 <p>Note that dimerisations and multiple reactants are handled properly.</p>
 <p>Propensity functions take a state vector of species quantities, ordered according to the output of the <code>species</code> function.</p>
 <pre class="r"><code>species(network)
@@ -592,7 +595,7 @@ sol %&gt;%
 </div>
 
 <br><br><br>
-<p style="text-align: center;">
+<p style="display: flex; justify-content: center;">
     <button onclick="window.location.href = &#39;/code.html&#39;;">← Code</button>
     <button onclick="window.location.href = &#39;/&#39;;">Home</button>
 </p>
