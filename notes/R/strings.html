@@ -272,9 +272,14 @@ color: #000000;
 padding-top: 10rem;
 padding-bottom: 10rem;
 }
-div.figure { max-width: 67.5%; }
-p, footer, hr, pre, table, ol, ul { width: 67.5%; }
+div.nav {
+display: flex;
+justify-content: center;
+text-align: center;
+}
+p, footer, hr, pre, table, ol, ul, div.figure { width: 67.5%; }
 pre { overflow-x: auto; }
+
 p, pre {
 margin-top: 0.75rem;
 margin-bottom: 0.75rem;
@@ -323,8 +328,7 @@ display: inline-block;
 font-size: 10pt;
 text-transform: uppercase;
 cursor: pointer;
-height: 28px;
-
+height: 26px;
 }
 button:hover {
 background-color: black;
@@ -336,7 +340,7 @@ width: 30%;
 color: #404040;
 }
 @media screen and (max-width: 800px) {
-p, footer, ol, ul, table, hr { width: 92%; }
+p, footer, ol, ul, table, hr, div.figure, div.nav { width: 92%; }
 body { width: 92%; padding-left: 8%; }
 pre { width: 88%; }
 ul { width: 88%; }
@@ -551,8 +555,8 @@ str_extract(header, &quot;title:.*&quot;) %&gt;%
 </div>
 
 <br><br><br>
-<p style="display: flex; justify-content: center;">
-    <button onclick="window.location.href = &#39;/notes.html&#39;;">← Notes</button>
+<p style="text-align: center;">
+    <button onclick="window.location.href = &#39;/notes.html&#39;;">Notes</button>
     <button onclick="window.location.href = &#39;/&#39;;">Home</button>
 </p>
 
