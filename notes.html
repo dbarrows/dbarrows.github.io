@@ -271,14 +271,8 @@ color: #000000;
 padding-top: 10rem;
 padding-bottom: 10rem;
 }
-div.nav {
-display: flex;
-justify-content: center;
-text-align: center;
-}
 p, footer, hr, pre, table, ol, ul, div.figure { width: 67.5%; }
 pre { overflow-x: auto; }
-
 p, pre {
 margin-top: 0.75rem;
 margin-bottom: 0.75rem;
@@ -286,6 +280,18 @@ margin-bottom: 0.75rem;
 p, ol, ul {
 font-size: 12pt;
 line-height: 1.6rem;
+}
+
+ul {
+list-style: none;
+margin-left: 0.5rem;
+padding-left: 0.5rem;
+}
+li:before {
+content: "·";
+display: inline-block;
+width: 1rem;
+margin-left: -1rem;
 }
 table, .sidenote, .marginnote { font-size: 11pt; }
 blockquote {
@@ -318,16 +324,13 @@ button {
 background-color: transparent;
 border: 1px solid black;
 color: black;
-display: flex;
-align-items: center;
-justify-content: center;
+padding: 3px 5px 4px 5px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 10pt;
 text-transform: uppercase;
 cursor: pointer;
-height: 26px;
 }
 button:hover {
 background-color: black;
@@ -339,7 +342,7 @@ width: 30%;
 color: #404040;
 }
 @media screen and (max-width: 800px) {
-p, footer, ol, ul, table, hr, div.figure, div.nav { width: 92%; }
+p, footer, ol, ul, table, hr, div.figure, p.nav { width: 92%; }
 body { width: 92%; padding-left: 8%; }
 pre { width: 88%; }
 ul { width: 88%; }
@@ -435,19 +438,35 @@ if (window.hljs) {
 <p><br /></p>
 <div id="r" class="section level1">
 <h1>R</h1>
-<p>·  <a href="notes/R/environments.html">Environments</a><br style="line-height: 25pt" /> ·  <a href="notes/R/factors.html">Factors</a><br style="line-height: 25pt" /> ·  <a href="notes/R/matrices.html">Matrices</a><br style="line-height: 25pt" /> ·  <a href="notes/R/strings.html">Strings</a><br style="line-height: 25pt" /> ·  <a href="notes/R/vectors.html">Vectors</a><br style="line-height: 25pt" /></p>
+<ul>
+<li><a href="notes/R/environments.html">Environments</a></li>
+<li><a href="notes/R/factors.html">Factors</a></li>
+<li><a href="notes/R/matrices.html">Matrices</a></li>
+<li><a href="notes/R/strings.html">Strings</a></li>
+<li><a href="notes/R/vectors.html">Vectors</a></li>
+</ul>
 </div>
 <div id="jupyter-notebooks" class="section level1">
 <h1>jupyter notebooks</h1>
-<p>·  <a href="notes/jupyter-notebooks/themes.html">Themes</a><br style="line-height: 25pt" /></p>
+<ul>
+<li><a href="notes/jupyter-notebooks/themes.html">Themes</a></li>
+</ul>
 </div>
 <div id="python" class="section level1">
 <h1>python</h1>
-<p>·  <a href="notes/python/environments.html">Environments</a><br style="line-height: 25pt" /></p>
+<ul>
+<li><a href="notes/python/environments.html">Environments</a></li>
+</ul>
 </div>
 <div id="r-markdown" class="section level1">
 <h1>r markdown</h1>
-<p>·  <a href="notes/r-markdown/chunk-literals.html">Chunk literals</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/fontawesome.html">Fontawesome</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/retina-graphics.html">Retina Graphics</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/showtext-graphics.html">Showtext Graphics</a><br style="line-height: 25pt" /> ·  <a href="notes/r-markdown/special-characters.html">Special Characters</a><br style="line-height: 25pt" /></p>
+<ul>
+<li><a href="notes/r-markdown/chunk-literals.html">Chunk literals</a></li>
+<li><a href="notes/r-markdown/fontawesome.html">Fontawesome</a></li>
+<li><a href="notes/r-markdown/retina-graphics.html">Retina Graphics</a></li>
+<li><a href="notes/r-markdown/showtext-graphics.html">Showtext Graphics</a></li>
+<li><a href="notes/r-markdown/special-characters.html">Special Characters</a></li>
+</ul>
 </div>
 
 <br><br><br>

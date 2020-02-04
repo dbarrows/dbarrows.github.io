@@ -272,14 +272,8 @@ color: #000000;
 padding-top: 10rem;
 padding-bottom: 10rem;
 }
-div.nav {
-display: flex;
-justify-content: center;
-text-align: center;
-}
 p, footer, hr, pre, table, ol, ul, div.figure { width: 67.5%; }
 pre { overflow-x: auto; }
-
 p, pre {
 margin-top: 0.75rem;
 margin-bottom: 0.75rem;
@@ -287,6 +281,18 @@ margin-bottom: 0.75rem;
 p, ol, ul {
 font-size: 12pt;
 line-height: 1.6rem;
+}
+
+ul {
+list-style: none;
+margin-left: 0.5rem;
+padding-left: 0.5rem;
+}
+li:before {
+content: "·";
+display: inline-block;
+width: 1rem;
+margin-left: -1rem;
 }
 table, .sidenote, .marginnote { font-size: 11pt; }
 blockquote {
@@ -319,16 +325,13 @@ button {
 background-color: transparent;
 border: 1px solid black;
 color: black;
-display: flex;
-align-items: center;
-justify-content: center;
+padding: 3px 5px 4px 5px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 10pt;
 text-transform: uppercase;
 cursor: pointer;
-height: 26px;
 }
 button:hover {
 background-color: black;
@@ -340,7 +343,7 @@ width: 30%;
 color: #404040;
 }
 @media screen and (max-width: 800px) {
-p, footer, ol, ul, table, hr, div.figure, div.nav { width: 92%; }
+p, footer, ol, ul, table, hr, div.figure, p.nav { width: 92%; }
 body { width: 92%; padding-left: 8%; }
 pre { width: 88%; }
 ul { width: 88%; }
@@ -452,15 +455,15 @@ if (window.hljs) {
 <pre class="r"><code>A &lt;- matrix(1, nrow = 2, ncol = 2)
 B &lt;- matrix(runif(4), nrow = 2)
 cbind(A, B)
-#&gt;      [,1] [,2]      [,3]      [,4]
-#&gt; [1,]    1    1 0.4623469 0.1715549
-#&gt; [2,]    1    1 0.1157282 0.6633890
+#&gt;      [,1] [,2]      [,3]       [,4]
+#&gt; [1,]    1    1 0.8725022 0.25089445
+#&gt; [2,]    1    1 0.6485154 0.09856823
 rbind(A, B)
-#&gt;           [,1]      [,2]
-#&gt; [1,] 1.0000000 1.0000000
-#&gt; [2,] 1.0000000 1.0000000
-#&gt; [3,] 0.4623469 0.1715549
-#&gt; [4,] 0.1157282 0.6633890</code></pre>
+#&gt;           [,1]       [,2]
+#&gt; [1,] 1.0000000 1.00000000
+#&gt; [2,] 1.0000000 1.00000000
+#&gt; [3,] 0.8725022 0.25089445
+#&gt; [4,] 0.6485154 0.09856823</code></pre>
 </div>
 <div id="operators" class="section level1">
 <h1>Operators</h1>
