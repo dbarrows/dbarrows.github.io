@@ -11,8 +11,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+<meta name="date" content="2020-01-01" />
 
-<title>Notes</title>
+<title>Packages</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -431,47 +432,81 @@ if (window.hljs) {
 
 
 
-<h1 class="title toc-ignore">Notes</h1>
+<h1 class="title toc-ignore">Packages</h1>
+<h4 class="date">2020</h4>
 
 
 
-<p><br /></p>
-<div id="r" class="section level1">
-<h1>R</h1>
-<ul>
-<li><a href="notes/R/environments.html">Environments</a></li>
-<li><a href="notes/R/factors.html">Factors</a></li>
-<li><a href="notes/R/matrices.html">Matrices</a></li>
-<li><a href="notes/R/packages.html">Packages</a></li>
-<li><a href="notes/R/strings.html">Strings</a></li>
-<li><a href="notes/R/vectors.html">Vectors</a></li>
-</ul>
+<div id="creation" class="section level1">
+<h1>Creation</h1>
+<p>Use <code>create_package</code><label for="tufte-sn-1" class="margin-toggle sidenote-number">1</label><input type="checkbox" id="tufte-sn-1" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">1</span> <a href="https://usethis.r-lib.org/reference/create_package.html">Create a package or project</a></span> from the <code>usethis</code><label for="tufte-sn-2" class="margin-toggle sidenote-number">2</label><input type="checkbox" id="tufte-sn-2" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">2</span> <a href="https://usethis.r-lib.org/index.html">usethis is a workflow package</a></span> package.</p>
+<p><label for="tufte-mn-1" class="margin-toggle">⊕</label><input type="checkbox" id="tufte-mn-1" class="margin-toggle"><span class="marginnote"></span></p>
+<pre class="r"><code>usethis::create_package(&quot;&lt;name&gt;&quot;)</code></pre>
 </div>
-<div id="jupyter-notebooks" class="section level1">
-<h1>jupyter notebooks</h1>
-<ul>
-<li><a href="notes/jupyter-notebooks/themes.html">Themes</a></li>
-</ul>
+<div id="r-code" class="section level1">
+<h1>R code</h1>
+<p>R code goes in the <code>R</code> directory - create manually or via <code>use_r</code><label for="tufte-sn-3" class="margin-toggle sidenote-number">3</label><input type="checkbox" id="tufte-sn-3" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">3</span> <a href="https://usethis.r-lib.org/reference/use_r.html">Create or edit R or test files</a></span>.</p>
+<pre class="r"><code>usethis::use_r(&quot;&lt;name&gt;&quot;)</code></pre>
 </div>
-<div id="python" class="section level1">
-<h1>python</h1>
-<ul>
-<li><a href="notes/python/environments.html">Environments</a></li>
-</ul>
+<div id="rcpp-code" class="section level1">
+<h1>Rcpp code</h1>
+<p>Rcpp code goes in the <code>src</code> directory - create manually or via <code>use_rcpp</code>, <code>use_rcpp_armadillo</code>, or <code>use_rcpp_eigen</code><label for="tufte-sn-4" class="margin-toggle sidenote-number">4</label><input type="checkbox" id="tufte-sn-4" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">4</span> <a href="https://usethis.r-lib.org/reference/use_rcpp.html">Use C, C++, RcppArmadillo, or RcppEigen</a></span>.</p>
+<pre class="r"><code>usethis::use_rcpp(&quot;&lt;name&gt;&quot;)</code></pre>
+<p>Generate <code>RcppExports.cpp</code> via <code>Rcpp::compileAttributes</code><label for="tufte-sn-5" class="margin-toggle sidenote-number">5</label><input type="checkbox" id="tufte-sn-5" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">5</span> <a href="https://r-pkgs.org/src.html#cpp-workflow"><code>compileAttributes</code>:</a> Scan the source files within a package for attributes and generate code as required. Generates the bindings required to call C++ functions from R for functions adorned with the ‘Rcpp::export’ attribute.</span>.</p>
+<pre class="r"><code>Rcpp::compileAttributes()</code></pre>
 </div>
-<div id="r-markdown" class="section level1">
-<h1>r markdown</h1>
-<ul>
-<li><a href="notes/r-markdown/chunk-literals.html">Chunk literals</a></li>
-<li><a href="notes/r-markdown/fontawesome.html">Fontawesome</a></li>
-<li><a href="notes/r-markdown/retina-graphics.html">Retina Graphics</a></li>
-<li><a href="notes/r-markdown/showtext-graphics.html">Showtext Graphics</a></li>
-<li><a href="notes/r-markdown/special-characters.html">Special Characters</a></li>
-</ul>
+<div id="license" class="section level1">
+<h1>License</h1>
+<p>Use the MIT (or another) license<label for="tufte-sn-6" class="margin-toggle sidenote-number">6</label><input type="checkbox" id="tufte-sn-6" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">6</span> <a href="https://usethis.r-lib.org/reference/licenses.html">License a package</a></span>.</p>
+<pre class="r"><code>usethis::use_mit_license(name = &quot;&lt;name&gt;&quot;)</code></pre>
+</div>
+<div id="documentation" class="section level1">
+<h1>Documentation</h1>
+<p>Roxygen<label for="tufte-sn-7" class="margin-toggle sidenote-number">7</label><input type="checkbox" id="tufte-sn-7" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">7</span> <a href="https://cran.r-project.org/web/packages/roxygen2/index.html"><code>roxygen2</code>: In-Line Documentation for R</a></span> comments can be added to R and Rcpp functions using tags<label for="tufte-sn-8" class="margin-toggle sidenote-number">8</label><input type="checkbox" id="tufte-sn-8" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">8</span> <a href="https://r-pkgs.org/man.html#roxygen-comments">R Packages: Roxygen comments</a>, <a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html">Introduction to roxygen2</a></span>.</p>
+<p>A simple template with some common parameters:</p>
+<pre class="r"><code>#&#39; &lt;Short description&gt;
+#&#39;
+#&#39; &lt;Long description&gt;
+#&#39;
+#&#39; @param param_name &lt;parameter description&gt;
+#&#39; @return &lt;description of returned object&gt;
+#&#39; 
+#&#39; @examples
+#&#39; function_name(x)
+#&#39; 
+#&#39; @export
+function_name &lt;- function(param_name) {
+    # do something
+}</code></pre>
+<p>The same can be done for exported Rcpp functions by substituting <code>#&#39;</code> for <code>//&#39;</code>.</p>
+<div id="updating-documentation" class="section level2">
+<h2>Updating documentation</h2>
+<p>Package documentation is generated from inline Roxygen documentation using the <code>document</code><label for="tufte-sn-9" class="margin-toggle sidenote-number">9</label><input type="checkbox" id="tufte-sn-9" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">9</span> <a href="https://devtools.r-lib.org/reference/document.html">Use roxygen to document a package</a></span> function:</p>
+<pre class="r"><code>devtools::document()</code></pre>
+</div>
+</div>
+<div id="checking" class="section level1">
+<h1>Checking</h1>
+<p>Checking a packages for potential problems (warnings/errors/notes) can be performed via the <code>check</code><label for="tufte-sn-10" class="margin-toggle sidenote-number">10</label><input type="checkbox" id="tufte-sn-10" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">10</span> <a href="https://devtools.r-lib.org/reference/check.html">Build and check a package, cleaning up automatically on success</a></span> function:</p>
+<pre class="r"><code>devtools::check()</code></pre>
+<p>If everything checks out, you should see:</p>
+<pre class="r"><code>0 errors ✔ | 0 warnings ✔ | 0 notes ✔</code></pre>
+</div>
+<div id="loading-functions" class="section level1">
+<h1>Loading functions</h1>
+<p>You can load all functions into the current R session (including internal functions) via <code>load_all</code><label for="tufte-sn-11" class="margin-toggle sidenote-number">11</label><input type="checkbox" id="tufte-sn-11" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">11</span> <a href="https://devtools.r-lib.org/reference/load_all.html">Load complete package</a></span>:</p>
+<pre class="r"><code>devtools::load_all()</code></pre>
+</div>
+<div id="installing" class="section level1">
+<h1>Installing</h1>
+<p>The package can be installed via <code>install</code>/<code>uninstall</code><label for="tufte-sn-12" class="margin-toggle sidenote-number">12</label><input type="checkbox" id="tufte-sn-12" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">12</span> <a href="https://devtools.r-lib.org/reference/install.html">Install a local development package</a></span> / <code>uninstall</code><label for="tufte-sn-13" class="margin-toggle sidenote-number">13</label><input type="checkbox" id="tufte-sn-13" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">13</span> <a href="https://devtools.r-lib.org/reference/uninstall.html">Uninstall a local development package</a></span>:</p>
+<pre class="r"><code>devtools::install()</code></pre>
+<pre class="r"><code>devtools::uninstall()</code></pre>
 </div>
 
 <br><br><br>
 <p style="text-align: center;">
+    <button onclick="window.location.href = &#39;/notes.html&#39;;">Notes</button>
     <button onclick="window.location.href = &#39;/&#39;;">Home</button>
 </p>
 
