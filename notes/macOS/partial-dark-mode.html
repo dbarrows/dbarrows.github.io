@@ -12,7 +12,7 @@
 
 
 
-<title>Notes</title>
+<title>Partial Dark Mode</title>
 
 <style type="text/css">
 @charset "UTF-8";
@@ -428,53 +428,20 @@ if (window.hljs) {
 
 
 
-<h1 class="title toc-ignore">Notes</h1>
+<h1 class="title toc-ignore">Partial Dark Mode</h1>
+<h4 class="date">March 2020</h4>
 
 
 
-<p><br /></p>
-<div id="r" class="section level1">
-<h1>R</h1>
-<ul>
-<li><a href="notes/R/environments.html">Environments</a></li>
-<li><a href="notes/R/factors.html">Factors</a></li>
-<li><a href="notes/R/matrices.html">Matrices</a></li>
-<li><a href="notes/R/packages.html">Packages</a></li>
-<li><a href="notes/R/strings.html">Strings</a></li>
-<li><a href="notes/R/vectors.html">Vectors</a></li>
-</ul>
-</div>
-<div id="jupyter-notebooks" class="section level1">
-<h1>jupyter notebooks</h1>
-<ul>
-<li><a href="notes/jupyter-notebooks/themes.html">Themes</a></li>
-</ul>
-</div>
-<div id="macos" class="section level1">
-<h1>macOS</h1>
-<ul>
-<li><a href="notes/macOS/partial-dark-mode.html">Partial Dark Mode</a></li>
-</ul>
-</div>
-<div id="python" class="section level1">
-<h1>python</h1>
-<ul>
-<li><a href="notes/python/environments.html">Environments</a></li>
-</ul>
-</div>
-<div id="r-markdown" class="section level1">
-<h1>r markdown</h1>
-<ul>
-<li><a href="notes/r-markdown/chunk-literals.html">Chunk literals</a></li>
-<li><a href="notes/r-markdown/fontawesome.html">Fontawesome</a></li>
-<li><a href="notes/r-markdown/retina-graphics.html">Retina Graphics</a></li>
-<li><a href="notes/r-markdown/showtext-graphics.html">Showtext Graphics</a></li>
-<li><a href="notes/r-markdown/special-characters.html">Special Characters</a></li>
-</ul>
-</div>
+<p>On macOS, sometimes the light mode seems too light and the dark mode seems too dark. Prior to macOS Catalina, the dark mode would only affect the titlebar/dock. On Catalina this is not officially supported, but is achievable via a terminal command:</p>
+<pre class="zsh"><code>defaults write -g NSRequiresAquaSystemAppearance -bool true</code></pre>
+<p>This leaves windows light but turns the titlebar, dock, and sidebar dark. Logout and log back in to see the changes.</p>
+<p>To revert:</p>
+<pre class="zsh"><code>defaults write -g NSRequiresAquaSystemAppearance -bool false</code></pre>
 
 <br><br><br>
 <p style="text-align: center;">
+    <button onclick="window.location.href = &#39;/notes.html&#39;;">Notes</button>
     <button onclick="window.location.href = &#39;/&#39;;">Home</button>
 </p>
 
