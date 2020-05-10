@@ -15,6 +15,19 @@
 
 <title>Matrices</title>
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 <style type="text/css">
 @charset "UTF-8";
 
@@ -136,6 +149,7 @@ hr { margin-left: 0; }
 table table, li p, li pre { width: auto; }
 li p, li pre {margin-top: auto; }
 div.fullwidth, table.fullwidth { max-width: 90%; }
+div.fullwidth > * { width: auto; }
 #TOC, h1.title { max-width: 90%; }
 #TOC ol, #TOC ul { width: auto; }
 div.fullwidth p.caption {
@@ -465,14 +479,14 @@ if (window.hljs) {
 B &lt;- matrix(runif(4), nrow = 2)
 cbind(A, B)
 #&gt;      [,1] [,2]      [,3]      [,4]
-#&gt; [1,]    1    1 0.1810244 0.4079260
-#&gt; [2,]    1    1 0.8969421 0.4052862
+#&gt; [1,]    1    1 0.9148060 0.2861395
+#&gt; [2,]    1    1 0.9370754 0.8304476
 rbind(A, B)
 #&gt;           [,1]      [,2]
 #&gt; [1,] 1.0000000 1.0000000
 #&gt; [2,] 1.0000000 1.0000000
-#&gt; [3,] 0.1810244 0.4079260
-#&gt; [4,] 0.8969421 0.4052862</code></pre>
+#&gt; [3,] 0.9148060 0.2861395
+#&gt; [4,] 0.9370754 0.8304476</code></pre>
 </div>
 <div id="operators" class="section level1">
 <h1>Operators</h1>

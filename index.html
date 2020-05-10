@@ -14,6 +14,19 @@
 
 <title>Dexter Barrows</title>
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 <style type="text/css">
 @charset "UTF-8";
 
@@ -135,6 +148,7 @@ hr { margin-left: 0; }
 table table, li p, li pre { width: auto; }
 li p, li pre {margin-top: auto; }
 div.fullwidth, table.fullwidth { max-width: 90%; }
+div.fullwidth > * { width: auto; }
 #TOC, h1.title { max-width: 90%; }
 #TOC ol, #TOC ul { width: auto; }
 div.fullwidth p.caption {
